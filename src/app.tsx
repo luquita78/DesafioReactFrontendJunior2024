@@ -1,4 +1,6 @@
 import React,{useState,useEffect} from "react";
+import Header from "./components/Header";
+import "./app.css";
 
 interface Tarefa {
   id: number;
@@ -22,8 +24,8 @@ export default function App() {
     fetchData();
   },[]);
   return (
-    <section>
-      <h1>Todos</h1>
+    <section className="todoapp">
+      <Header/>
       <div>
       <ul>
         {tarefas.map(tarefa => (
